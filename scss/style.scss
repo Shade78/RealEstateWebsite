@@ -37,6 +37,13 @@ body {
 
 /*---------------------General-------------------*/
 
+.title {
+    font-weight: 600;
+    font-size: clamp(1.875rem, 1.548rem + 1.64vw, 3rem);
+    line-height: 126%;
+    text-transform: capitalize;
+}
+
 .text {
     color: var(--text-color);
     font-size: 18px;
@@ -220,11 +227,16 @@ body {
 
 .hero {
     margin-top: clamp(1.875rem, 1.057rem + 4.09vw, 4.688rem);
+    padding-bottom: clamp(1.25rem, -0.023rem + 6.36vw, 5.625rem);
+    position: relative;
     .hero-deco {
         position: absolute;
-        bottom: -240px;
+        bottom: -150px;
         right: 0;
         z-index: -1;
+        @media (max-width: 576px) {
+            height: 300px;
+        }
     }
 		&__container {
             display: flex;
@@ -396,7 +408,39 @@ body {
     }
 }
 
+/*--------------Featured---------------*/
 
+.featured {
+    padding-top: clamp(1.25rem, -0.023rem + 6.36vw, 5.625rem);
 
+    &__container {
+    }
 
+    &__title {
+        
+    }
 
+    &__box {
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        // flex-shrink: 0;
+        overflow: auto;
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
+    }   
+
+    &__item {
+        flex: 0 0 auto;
+    }
+
+    &__img {
+    }
+}
+.title {
+}
+
+/*--------------/Featured---------------*/
